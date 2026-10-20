@@ -11,3 +11,5 @@ echo "</p><p>";
 for ($i = 1; $i < 11; $i++) {
     echo factorial($i) . "<br>";
 }
+
+echo "</p>";
