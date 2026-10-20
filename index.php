@@ -1,5 +1,6 @@
 <?php
 include "NacitavacOsob.php";
+include "TextovaTabulka.php";
 
 
 echo "</p><p>";
@@ -7,9 +8,6 @@ echo "</p><p>";
 $nacitavac = new NacitavacOsob("data/osoby.csv");
 $osoby = $nacitavac->nacitaj();
 
-foreach ($osoby as $osoba) {
-    echo $osoba->getMeno() . " " . $osoba->getPriezvisko() . ", " .
-        $osoba->getRokNarodenia() . ", " . $osoba->getPohlavie() . "<br>";
-}
+echo "<pre>" . TextovaTabulka::vykresli($osoby) . "</pre>";
 
 echo "</p>";
